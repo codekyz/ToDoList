@@ -57,9 +57,13 @@ a {
     margin: 20px 25px;
 }
 
+.contents__todo__item > div {
+    display: inline;
+}
+
 .contents__add {
     height: 50px;
-    background-color: teal;
+    text-align: center;
 }
 
 .footer {
