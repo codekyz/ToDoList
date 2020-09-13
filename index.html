@@ -13,29 +13,22 @@
     <div class="wrap">
         <div class="contents">
             <div class="contents__today">
-                <div class="contents__date">2020년 9월 9일</div>
+                <div class="contents__date" id="today"></div>
                 <div class="contents__day">월요일</div>
             </div>
 
             <div class="contents__todo">
                 <ul class="contents__todo__list">
                     <li class="contents__todo__item">
-                        <input class="contents__todo__cb" type="checkbox" name="check" id="c1">
-                        <span class="contents__todo__text">첫번째 할일</span>
-                    </li class="contents__todo__item">
-                    <li>
-                        <input class="contents__todo__cb" type="checkbox" name="check" id="c2">
-                        <span class="contents__todo__text">첫번째 할일</span>
-                    </li>
-                    <li class="contents__todo__item">
-                        <input class="contents__todo__cb" type="checkbox" name="check" id="c3">
-                        <span class="contents__todo__text">세번째 할일</span>
+                        <input class="contents__todo__cb" type="checkbox" name="check" id="cb" onclick="ischecked(this)">
+                        <span class="contents__todo__text" id="text">첫번째 할일</span>
+                        <div><i class="far fa-edit"></i> <i class="far fa-trash-alt"></i></div>
                     </li>
                 </ul>
             </div>
 
             <div class="contents__add">
-                <span class="contents__add__btn">추가하기</span>
+                <button class="contents__add__btn">추가하기 <i class="fas fa-plus"></i></button>
             </div>
         </div>
 
@@ -46,6 +39,7 @@
             </footer>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
