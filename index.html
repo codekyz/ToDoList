@@ -14,7 +14,7 @@
         <div class="contents">
             <div class="contents__today">
                 <div class="contents__date" id="today"></div>
-                <div class="contents__day">월요일</div>
+                <div class="contents__day" id="weekday"></div>
             </div>
 
             <div class="contents__todo">
@@ -22,7 +22,11 @@
                     <li class="contents__todo__item">
                         <input class="contents__todo__cb" type="checkbox" name="check" id="cb" onclick="ischecked(this)">
                         <span class="contents__todo__text" id="text">첫번째 할일</span>
-                        <div><i class="far fa-edit"></i> <i class="far fa-trash-alt"></i></div>
+                        <div>
+                            <a><i class="far fa-edit"></i></a>
+                            <a><i class="far fa-trash-alt"></i></a>
+                            <!-- a tag error -->
+                        </div>
                     </li>
                 </ul>
             </div>
