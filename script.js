@@ -29,3 +29,46 @@ function getdate() {
 }
 
 getdate();
+
+function popup_open() {
+    var popup = document.getElementById('popup');
+
+    if (popup.className === 'hidden' ) {
+        popup.className = 'flex popup';
+    } else {
+        popup.className = 'hidden';
+    }
+}
+
+function popup_close() {
+    var popup = document.getElementById('popup');
+
+    if (popup.className === 'flex popup' ) {
+        popup.className = 'hidden';
+    } else {
+        popup.className = 'flex popup';
+    }
+}
+
+function addtodo() {
+    var text = document.getElementById('todotext').value;
+    var list = document.getElementById('todolist');
+
+    popup_close();
+    var li = document.createElement('li');
+    var cb = document.createElement('input');
+    li.className = 'contents__todo__item';
+    cb.setAttribute('type', 'checkbox');
+    cb.setAttribute('onclick', 'ischecked()');
+    // ischecked() error
+    cb.className = 'contents__todo__cb';
+    var span = document.createElement('span');
+    span.innerText = text;
+    span.className = 'contents__todo__text';
+
+    li.appendChild(cb);
+    li.append(' ');
+    li.appendChild(span);
+    list.appendChild(li);
+
+}

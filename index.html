@@ -18,7 +18,7 @@
             </div>
 
             <div class="contents__todo">
-                <ul class="contents__todo__list">
+                <ul class="contents__todo__list" id="todolist">
                     <li class="contents__todo__item">
                         <input class="contents__todo__cb" type="checkbox" name="check" id="cb" onclick="ischecked(this)">
                         <span class="contents__todo__text" id="text">첫번째 할일</span>
@@ -32,7 +32,7 @@
             </div>
 
             <div class="contents__add">
-                <button class="contents__add__btn">추가하기 <i class="fas fa-plus"></i></button>
+                <button class="contents__add__btn" onclick="popup_open()">추가하기 <i class="fas fa-plus"></i></button>
             </div>
         </div>
 
@@ -43,6 +43,16 @@
             </footer>
         </div>
     </div>
+
+    <div class="hidden" id="popup">
+        <div class="popup__contents">
+            <div class="popup__title">추가하기</div>
+            <div><input type="text" id="todotext" name="todotext"></div>
+            <div><button class="popup__contents__btn" onclick="addtodo()">확인</button></div>
+            <div><button class="popup__contents__btn" onclick="popup_close()">취소</button></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
